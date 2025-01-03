@@ -30,37 +30,48 @@ const Home = ({ handleOpenModal }) => {
   };
 
   return (
-    <div className='h-[100vh] flex justify-center'>
+    <div className='min-h-screen flex justify-center'>
       <CanvasAnimation />
       
-      <div className="absolute top-4 right-20 flex flex-row space-x-6">
-        <SearchBar handleSearch={handleSearch} />
+      <div className="absolute top-4 right-10 flex flex-row space-x-6">
+        <div className='px-2'>
+          <SearchBar handleSearch={handleSearch} />
+        </div>
         
-        <a
-          href="tel:"
-          rel="noopener noreferrer"
-          className="transition transform duration-300 hover:scale-125 hover:text-red-400"
-        >
-          <FaPhone size={30} />
-        </a>
-
-        <a
-          href="https://wa.me/"
-          rel="noopener noreferrer"
-          className="transition transform duration-300 hover:scale-125 hover:text-green-500"
-        >
-          <FaWhatsapp size={30} />
-        </a>
+        <div className="flex space-x-4">
+          <a
+            href="tel:"
+            rel="noopener noreferrer"
+            className="transition transform duration-300 hover:scale-125 hover:text-red-400"
+          >
+            <FaPhone size={30} />
+          </a>
+          <a
+            href="https://wa.me/"
+            rel="noopener noreferrer"
+            className="transition transform duration-300 hover:scale-125 hover:text-green-500"
+          >
+            <FaWhatsapp size={30} />
+          </a>
+        </div>
       </div>
 
-      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 flex flex-col items-center justify-center space-y-4 text-white p-4">
-        <h1 className="text-7xl font-semibold">Vikas Sharma</h1>
-        <p className="font-semibold text-2xl font-serif">Innovative Coder and Web Developer</p>
-        <div className="flex items-center mt-4">
-          <a href="#about" className="bg-blue-500 text-white px-4 py-2 rounded" onClick={handleOpenModal}>
+      <div className="absolute top-1/2 left-4 sm:left-10 md:left-20 transform -translate-y-1/2 flex flex-col items-start justify-center space-y-4 text-white p-4 sm:px-6 md:px-8">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-left">
+          Vikas Sharma
+        </h1>
+        <p className="text-lg sm:text-xl md:text-2xl font-serif text-left">
+          Innovative Coder and Web Developer
+        </p>
+        <div className="flex items-center mt-4 space-x-2">
+          <a
+            href="#about"
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+            onClick={handleOpenModal}
+          >
             About Me
           </a>
-          <FaArrowRight className="ml-2 size-8" />
+          <FaArrowRight className=" text-2xl sm:text-3xl" />
         </div>
       </div>
 
